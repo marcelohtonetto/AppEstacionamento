@@ -122,9 +122,8 @@ namespace AppEstacionamento.Repositorio
                                      $" valor pago: {veiculo.ValorPago}," +
                                      $" data da saída: {veiculo.DataSaida}"); 
                     }
-                    
                 }
-                Console.WriteLine("Relátorio exportado");       
+                Console.WriteLine("Relátorio exportado, nome do arquivo: relatorio.txt");
             }
             catch (Exception ex)
             {
