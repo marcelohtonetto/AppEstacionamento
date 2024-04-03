@@ -122,7 +122,7 @@ public class Relatorio
     {
         foreach (var veiculo in listaVeiculo) 
         {
-            Console.WriteLine($" Placa do veículo :{veiculo.Placa}," +
+            Console.WriteLine($" Placa do veículo :{veiculo.PlacaVeiculo}," +
                               $" modelo do veículo: {veiculo.Modelo}," +
                               $" data da entrada : {veiculo.DataEntrada}," +
                               $" data da saída: {veiculo.DataSaida}," +

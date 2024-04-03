@@ -26,11 +26,11 @@ namespace AppEstacionamento.Repositorio
                 try
                 {
                     string insertEntradaVeiculo = " insert into EntradaVeiculo(id, PlacaVeiculo, Modelo, DataEntrada, ValorPago)" +
-                                                   $" Values('{Veiculo.Id}','{Veiculo.Placa.ToUpper()}','{Veiculo.Modelo.ToUpper()}','{Veiculo.DataEntrada} ', {Veiculo.ValorPago} )";
+                                                   $" Values('{Veiculo.Id}','{Veiculo.PlacaVeiculo.ToUpper()}','{Veiculo.Modelo.ToUpper()}','{Veiculo.DataEntrada} ', {Veiculo.ValorPago} )";
 
                     connection.Execute(insertEntradaVeiculo);
 
-                    Console.WriteLine($"Veículo modelo '{Veiculo.Modelo}' com a placa '{Veiculo.Placa}' cadastrado!");
+                    Console.WriteLine($"Veículo modelo '{Veiculo.Modelo}' com a placa '{Veiculo.PlacaVeiculo}' cadastrado!");
                     Console.ReadKey();
                 }
                 catch (Exception ex)

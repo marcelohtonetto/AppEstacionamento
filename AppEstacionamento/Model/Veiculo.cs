@@ -19,19 +19,19 @@ public class Veiculo : IVeiculo
     public Veiculo(string placa, string modelo)
     {
         Id = Guid.NewGuid();
-        Placa = placa;
+        PlacaVeiculo = placa;
         Modelo = modelo;
         DataEntrada = DateTime.Now;
         ValorPago = 0;
     }
     public Veiculo(string placa)
     {
-        Placa = placa; 
+        PlacaVeiculo = placa; 
     }
 
     public Guid Id { get; set; }
-    public string? Placa { get; set; }
-    public string? Modelo { get; set; }
+    public string PlacaVeiculo { get; set; }
+    public string Modelo { get; set; }
     public DateTime DataEntrada { get; set; }
     public DateTime DataSaida { get; set; }
     public decimal ValorPago { get; set; }

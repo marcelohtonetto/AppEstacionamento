@@ -37,6 +37,7 @@ namespace AppEstacionamento.Repositorio
 
                     lista = (ICollection<Veiculo>)connection.Query<Veiculo>(selectRelatorio);                
                 }
+                
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.ToString());
@@ -115,7 +116,7 @@ namespace AppEstacionamento.Repositorio
                     sw.WriteLine("Relátorio dos veículos");
                     foreach (var veiculo in listaveiculo)
                     {
-                        sw.WriteLine($" Placa do veículo :{veiculo.Placa}," +
+                        sw.WriteLine($" Placa do veículo :{veiculo.PlacaVeiculo}," +
                                      $" modelo do veículo: {veiculo.Modelo}," +
                                      $" data da entrada : {veiculo.DataEntrada}," +
                                      $" valor pago: {veiculo.ValorPago}," +

@@ -86,11 +86,11 @@ public class SaidaVeiculoRepositorio
             try
             {
                 string updateSaidaVeiculo = string.Format(CultureInfo.InvariantCulture, " update EntradaVeiculo set ValorPago = {0}, PagamentoEfetuado = 1, ", Veiculo.ValorPago) +
-                                            $" DataSaida = '{DateTime.Now}'where  PlacaVeiculo = '{Veiculo.Placa}' and PagamentoEfetuado = 0";
+                                            $" DataSaida = '{DateTime.Now}'where  PlacaVeiculo = '{Veiculo.PlacaVeiculo}' and PagamentoEfetuado = 0";
 
                 connection.Execute(updateSaidaVeiculo);
 
-                Console.WriteLine($"Saida do veículo com a placa '{Veiculo.Placa}' liberada");
+                Console.WriteLine($"Saida do veículo com a placa '{Veiculo.PlacaVeiculo}' liberada");
                 Console.ReadKey();
             }
             catch (Exception ex) 
@@ -99,6 +99,6 @@ public class SaidaVeiculoRepositorio
             }
         }
     }
-    private decimal TempoPermanencia() => Math.Round(RetornaValorHora() * (decimal)RetornaTempoPermanencia(Veiculo.Placa), 2);
+    private decimal TempoPermanencia() => Math.Round(RetornaValorHora() * (decimal)RetornaTempoPermanencia(Veiculo.PlacaVeiculo), 2);
     public decimal RetornaValorAPagar() => (Veiculo.ValorPago = TempoPermanencia());
 }
